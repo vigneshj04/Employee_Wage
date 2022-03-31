@@ -4,6 +4,8 @@ public class EmployeeWage {
 
         empAttendance();
         empDayWage();
+        empWagePartTime();
+
     }
 
     static void empAttendance() {
@@ -27,6 +29,26 @@ public class EmployeeWage {
             System.out.println("Employee wage per day = " + total_working_Hrs * Wage_per_Hour);
         } else
             System.out.println("Employee is absent");
+    }
+
+
+    public static void empWagePartTime(){
+
+        int Present = 1;
+        int PART_TIME = 2;
+        int WAGE_PER_HR = 20;
+        int Total_working_Hrs = 8;
+        int Part_Time_Working_Hrs = 4;
+
+        double empCheck = Math.floor((Math.random() * 10) % 3);
+        if (Present == empCheck) {
+            System.out.println("Employee wage per day = " + Total_working_Hrs * WAGE_PER_HR);
+        } else if (PART_TIME == empCheck) {
+            System.out.println("Employee is Working in Partime wage is =" + Part_Time_Working_Hrs * WAGE_PER_HR);
+        } else {
+            System.out.println("Employee is absent");
+        }
+
     }
 
 }
