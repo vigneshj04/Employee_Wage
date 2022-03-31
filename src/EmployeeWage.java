@@ -5,7 +5,7 @@ public class EmployeeWage {
         empAttendance();
         empDayWage();
         empWagePartTime();
-
+        empSwitchCase();
     }
 
     static void empAttendance() {
@@ -32,7 +32,7 @@ public class EmployeeWage {
     }
 
 
-    public static void empWagePartTime(){
+    public static void empWagePartTime() {
 
         int Present = 1;
         int PART_TIME = 2;
@@ -50,6 +50,28 @@ public class EmployeeWage {
         }
 
     }
+
+    public static void empSwitchCase() {
+        final int present = 1;
+        final int part_Time = 2;
+        int wage_per_Hour = 20;
+        int total_working_Hrs = 8;
+        int part_Time_Working_Hrs = 4;
+        int emp_check = (int) Math.floor((Math.random() * 10) % 2 + 1);
+        switch (emp_check) {
+            case present:
+                System.out.println("Employee Working in Full Time");
+                System.out.println("Employee Wage is =" + wage_per_Hour * total_working_Hrs);
+                break;
+            case part_Time:
+                System.out.println("Employee Working in Part Time");
+                System.out.println("Employee Wage is = " + wage_per_Hour * part_Time_Working_Hrs);
+                break;
+            default:
+                System.out.println("Employee is Absent");
+        }
+    }
+
 
 }
 
